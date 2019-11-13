@@ -20,3 +20,6 @@ It should be a card game that a single player can play all the way through. I am
 
 # Link to my wireframe can be found here:
 >https://gomockingbird.com/projects/t75khb6/4gXVnC
+
+# Link to my planner can be found here:
+> https://docs.google.com/spreadsheets/d/1VNC3Wi5fHmYEbHpImLCSLr1y7crHzmO4rxIMVwX5MUc/edit?usp=sharing
