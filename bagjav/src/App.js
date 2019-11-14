@@ -18,7 +18,8 @@ class App extends Component {
         <Link to="">Intro</Link>
       </nav>
       <Route path="" render={Intro}/>
-     
+     {/* <Route path='' render={Cards}/> */}
+     <Cards/>
    
     </div>
   );
