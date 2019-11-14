@@ -1,15 +1,15 @@
 import React from 'react';
-import './App.css';
-
-function Player() {
+// import './player.css';
+// import Cards from './Card'
+export default function Player() {
+    // this.state = Cards
   return (
     <div className="App">
-     <h1> Welcome to Bagjav!</h1>
+     {/* <p>{this.state.player1}</p> */}
     </div>
   );
 }
 
-export default Player;
 
 //Player should be able to choose card from their hand and select player they want to attack
 //PLayer cannot play card unless it is their turn 

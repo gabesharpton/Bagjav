@@ -3,7 +3,7 @@ import { Route, Link } from "react-router-dom"
 import './App.css';
 import Intro from './Intro'
 import Cards from './Card'
-
+import Player from './Player'
 
 
 class App extends Component {
@@ -15,11 +15,11 @@ class App extends Component {
   return (
     <div className="App">
       <nav>
-        <Link to="">Intro</Link>
+        {/* <Link to='' render={Player}>Intro</Link> */}
       </nav>
       <Route path="" render={Intro}/>
-     {/* <Route path='' render={Cards}/> */}
      <Cards/>
+     <Player></Player>
    
     </div>
   );
