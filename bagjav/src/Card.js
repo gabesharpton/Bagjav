@@ -10,7 +10,7 @@ export default class Cards extends Component{
             player2: [],
             player3: [],
             player4: [],
-            playCard: []
+            playCard: [],
             
         }
         //this.startGame();
@@ -75,15 +75,16 @@ export default class Cards extends Component{
         return;
     }
     choseCard(){
-        this.setState({playCard: this.state.player1.splice(0,1)})
+        this.setState(prevState => ({playCard: this.state.player2.pop()}))
         //I need to filter player2 array to find props.children[0]
         //if it has that then push to this.state.playCard
         //Player 3 sorts through array to find card etc....
     }
     player2turn() {
-        this.setState({playCard: this.state.player2.filter((card) => {
-            return card === this.state.playCard[0].props.children[0]
-        })})
+        // this.setState({playCard: this.state.player2.filter((card,index ) => {
+        //     return index === this.state.playCard[0].props.children ? card : null
+        // })})
+        this.setState(prevState => ({playCard: this.state.player1.pop(prevState)}))
     }
     
     
@@ -109,7 +110,7 @@ export default class Cards extends Component{
                 <button onClick={() => this.choseCard()} >chose card</button>
                 <button onClick={() => this.player2turn()} >PLayer 2</button>
                 
-                <p>{this.state.playCard} this one</p>
+                <p>{this.state.playCard} is the play card</p>
                 <p>{this.state.playCard.length}</p>
                 </div>
             )

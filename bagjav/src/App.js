@@ -3,13 +3,16 @@ import { Route, Link } from "react-router-dom"
 import './App.css';
 import Intro from './Intro'
 import Cards from './Card'
-import Player from './Player'
+import PlayerSelect from './PlayerSelect'
 
 
 class App extends Component {
   constructor(){
     super()
-    this.state= deck1
+    this.state= {
+      players: [],
+      
+    }
   }
   render(){
   return (
@@ -19,7 +22,7 @@ class App extends Component {
       </nav>
       <Route path="" render={Intro}/>
      <Cards/>
-     <Player></Player>
+     <PlayerSelect />
    
     </div>
   );

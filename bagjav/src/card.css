@@ -10,3 +10,15 @@ p{
     margin-bottom: 30px;
     line-height: 30px;
 }
+.cards {
+    height: 50px;
+    width: 100px;
+    border: 2px solid black;
+    padding: 15px;
+
+}
+.players{
+    width: 200px;
+    height: 100px;
+
+}
