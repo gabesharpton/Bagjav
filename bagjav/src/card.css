@@ -22,6 +22,10 @@ p{
     height: 100px;
 
 }
+button {
+    padding: 15px;
+
+}
 /* #player1{
     position: relative;
     top: 520px;

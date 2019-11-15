@@ -1,9 +1,8 @@
 import React, {Component} from 'react';
-import { Route, Link } from "react-router-dom"
 import './App.css';
-import Intro from './Intro'
+//import Intro from './Intro'
 import Cards from './Card'
-import PlayerSelect from './components/PlayerSelect'
+//import PlayGame from './components/playGame'
 
 
 class App extends Component {
@@ -12,9 +11,9 @@ class App extends Component {
   return (
     <div className="App">
       
-      <Route path="" render={Intro}/>
+      {/* <Route path="" render={Intro}/> */}
      <Cards/>
-     <PlayerSelect />
+     {/* <PlayGame /> */}
    
     </div>
   );

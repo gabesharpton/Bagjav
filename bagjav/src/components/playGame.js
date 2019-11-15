@@ -1,25 +1,50 @@
+import React, {Component} from 'react';
+// import this.state from '../Card'
 
-class playGame{
-startGame = () => {
-    // let choice = prompt("Would you like to start the game?")
-    // if(choice === 'yes'){
-    // this.choseCard()
-    // console.log(this.playCard)
-    // this.state.playCard = this.state.player2.filter(() => this.state.playCard)
-    // console.log(this.state.children)
-    return;
-}
-choseCard = () => {
-    this.setState({playCard: this.props.player1.shift()})
-    //I need to filter player2 array to find props.children[0]
-    //if it has that then push to this.state.playCard
-    //Player 3 sorts through array to find card etc....
+
+export default class PlayGame extends Component{
+    constructor(props){
+        super(props);
+        this.state = {
+            deck: [],
+            player1: [],
+            player2: [],
+            player3: [],
+            player4: [],
+            playCard: [],
+            
+        }
+    }
+
+choseCard(){
+    this.setState(state => {
+        return {playCard: [...state.playCard, ...state.player1.splice(0, 1)]};
+      });
+    
 }
 player2turn = () => {
-    // this.setState({playCard: this.state.player2.filter((card,index ) => {
-    //     return index === this.state.playCard[0].props.children ? card : null
-    // })})
-    this.setState(prevState => ({playCard: this.state.player2.shift().prevState}))
+    this.setState(state => {
+        return {playCard: [...state.playCard, ...state.player2.splice(0, 1)]};
+      });
+    
+}
+player3turn = () => {
+    this.setState(state => {
+        return {playCard: [...state.playCard, ...state.player3.splice(0, 1)]};
+      });
+}
+player4turn = () => {
+    this.setState(state => {
+        return {playCard: [...state.playCard, ...state.player4.splice(0, 1)]};
+      });
+}
+render() 
+{
+console.log(this)
+return (
+    <div>
+        
+    </div>
+)
 }
 }
-export default playGame

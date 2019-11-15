@@ -65,61 +65,79 @@ export default class Cards extends Component{
             }) 
     }
 
-    startGame = () => {
-        // let choice = prompt("Would you like to start the game?")
-        // if(choice === 'yes'){
-        // this.choseCard()
-        // console.log(this.playCard)
-        // this.state.playCard = this.state.player2.filter(() => this.state.playCard)
-        // console.log(this.state.children)
-        return;
-    }
-    choseCard(){
-        // let player1 = [ ...this.state.player1 ]
-        // let chosenCard = player1.splice(0, 1)
-        // this.setState(() => ({player1, chosenCard}))
-        this.setState(state => {
-            return {playCard: [...state.playCard, ...state.player1.splice(0, 1)]};
-          });
+
+choseCard(){
+    this.setState(({playCard, player1}) => {
+        return {
+            playCard: [...playCard, ...player1.slice(0, 1)],
+            player1: [...player1.slice(1, player1.length)]
         
-    }
-    player2turn() {
-        // let player2 = [ ...this.state.player2 ]
-        // let playCard = player2.splice(0, 1)
-        // this.setState(() => ({player2, playCard}))
-        this.setState(state => {
-            return {playCard: [...state.playCard, ...state.player2.splice(0, 1)]};
-          });
+        };
+      });
+    
+}
+player2turn = () => {
+    let player2 = [...this.state.player2]
+    let playCard = [...this.state.playCard['0'].props.children[0]]
+            // for(let i = 0; i < player2.length; i++){
+                console.log(playCard)
+                console.log(player2['0'].props.children[0])
+        if(player2.includes(playCard === true)){
+    this.setState(({playCard, player2}) => {
+
+                return {
+                    playCard: [...playCard, ...player2.slice(playCard, 1)],
+                    player2: [...player2.slice(1, player2.length)]
+                
+                };
+            }
+            );
         
-    }
-        // this.setState(() => ({playCard: this.state.player2.splice(0,1)}))
-        //I need to filter player2 array to find props.children[0]
-        //if it has that then push to this.state.playCard
-        //Player 3 sorts through array to find card etc....
-    
-    
-    
-    // checkCard (cardValue) {
-        //     return this.cardValue = this.state.playCard["0"].props.children[0]
+        // else(player2.find(playCard === false))
+        // return ;
+               
+}
+}
+player3turn = () => {
+    this.setState(({playCard, player3}) => {
+        return {
+            playCard: [...playCard, ...player3.slice(0, 1)],
+            player3: [...player3.slice(1, player3.length)]
         
-        // }
+        };
+      });
+}
+player4turn = () => {
+    this.setState(({playCard, player4}) => {
+        return {
+            playCard: [...playCard, ...player4.slice(0, 1)],
+            player4: [...player4.slice(1, player4.length)]
+        
+        };
+      });
+}
+
+
+
         render(){
             console.log( this.state.player1 )
             console.log( this.state.player2 )
             console.log( this.state.player3 )
             console.log( this.state.player4 )
             console.log(this.state.playCard)
-            // console.log(this.state.playCard["0"].props.children[0])
+            
             return(
                 <div>
-                    {/* <p>{this.state.deck}</p> */}
+            
                 <p id='player1'>{this.state.player1}</p>
                 <p id='player2'>{this.state.player2}</p>
                 <p id='player3'>{this.state.player3}</p>
                 <p id='player4'>{this.state.player4}</p>
                 <button onClick={() => this.deal()} >Deal</button>
-                <button onClick={() => this.choseCard()} >chose card</button>
-                <button onClick={() => this.player2turn()} >PLayer 2</button>
+                <button onClick={() => this.choseCard()} >Player 1</button>
+                <button onClick={() => this.player2turn()} >Player 2</button>
+                <button onClick={() => this.player3turn()} >Player 3</button>
+                <button onClick={() => this.player4turn()} >Player 4</button>
                 
                 <p id='playcard'>{this.state.playCard} is the play card</p>
                 <p>{this.state.playCard.length}</p>
