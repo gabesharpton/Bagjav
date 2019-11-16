@@ -1,11 +1,10 @@
 import React, {Component} from 'react';
 import './card.css'
-//import {_} from 'lodash'
-import Deck from './components/Deck'
+//import Deck from './components/Deck'
 
 export default class Cards extends Component{
-    constructor(props){
-        super(props);
+    constructor(){
+        super();
         this.state = {
             deck: [],
             player1: [],
@@ -54,8 +53,9 @@ export default class Cards extends Component{
             this.setState({ player1: this.state.deck.filter((cards, index) => {
                 
                     return index < 13 ? cards : null
-                }) 
+                }).sort() 
             }) 
+            this.state.player1.sort();
             this.setState({ player2: this.state.deck.filter((cards, index) => {
                     return index >= 13 && index < 26 ? cards : null
                 }) 
@@ -70,87 +70,101 @@ export default class Cards extends Component{
             }) 
     }
     
-
-choseCard = () => {
-    this.setState(({playCard, player1}) => {
-        return {
-            playCard: [...playCard, ...player1.slice(0, 1)],
-            player1: [...player1.slice(1, player1.length)]
+    sort = () => {
         
-        };
-      });
+        //let sorted = (a,b) => a.props.children - b.props.children;
+        this.setState({player1: this.state.player1.sort((a,b) => a.key - b.key)}
+            );
+        this.setState({player2: this.state.player2.sort((a,b)=> a.key - b.key)}
+            );
+        this.setState({player3: this.state.player3.sort((a,b) => a.key - b.key)}
+            );
+        this.setState({player4: this.state.player4.sort((a,b) => a.key - b.key)}
+            );
+                };
+            
     
-}
-player2turn = () => {
-    let {player2} = this.state
-    let {playCard} = this.state
-let filtered = player2.filter(cards=> {
-    return playCard.some(card=> {
-        return card.props.children === cards.props.children
-    })
-});
-let newPlayer2 = player2.filter(card => {
-    return playCard.some(cards=> {
-    return card.props.children !== cards.props.children})})
-this.setState({
-    playCard: [...playCard, ...filtered],
-    player2: [...newPlayer2]
-})
-//console.log(filtered)
+            choseCard = () => {
+                this.setState(({playCard, player1}) => {
+                    return {
+                        playCard: [...playCard, ...player1.slice(0, 1)],
+                        player1: [...player1.slice(1, player1.length)]
+                    
+                    };
+                });
+                
+            }
+           player2turn = () => {
+                let {player2} = this.state
+                let {playCard} = this.state
+            let filtered = player2.filter(cards=> {
+                return playCard.some(card=> {
+                    return card.props.children === cards.props.children
+                })
+            });
+            let newPlayer2 = player2.filter(card => {
+                return playCard.some(cards=> {
+                return card.props.children !== cards.props.children})})
+            this.setState({
+                playCard: [...playCard, ...filtered],
+                player2: [...newPlayer2]
+            })
+            //console.log(filtered)
 
+                }
+           player3turn = () => {
+                let {player3} = this.state
+                let {playCard} = this.state
+            let filtered = player3.filter(cards=> {
+                return playCard.some(card=> {
+                    return card.props.children === cards.props.children
+                })
+            });
+            let newPlayer3 = player3.filter(card => {
+                return playCard.some(cards=> {
+                return card.props.children !== cards.props.children})})
+            this.setState({
+                playCard: [...playCard, ...filtered],
+                player3: [...newPlayer3]
+            })
+            }
+           player4turn = () => {
+                let {player4} = this.state
+                let {playCard} = this.state
+            let filtered = player4.filter(cards=> {
+                return playCard.some(card=> {
+                    return card.props.children === cards.props.children
+                })
+            });
+            let newPlayer4 = player4.filter(card => {
+                return playCard.some(cards=> {
+                return card.props.children !== cards.props.children})})
+            this.setState({
+                playCard: [...playCard, ...filtered],
+                player4: [...newPlayer4]
+            })
+            }
+playGame = (e) => {
+            if(this.state.playCard.length < 4){
+                this.playGame()
+                this.player2turn()
+                this.player3turn()
+                this.player4turn()
+        }
     }
-player3turn = () => {
-    let {player3} = this.state
-    let {playCard} = this.state
-let filtered = player3.filter(cards=> {
-    return playCard.some(card=> {
-        return card.props.children === cards.props.children
-    })
-});
-let newPlayer3 = player3.filter(card => {
-    return playCard.some(cards=> {
-    return card.props.children !== cards.props.children})})
-this.setState({
-    playCard: [...playCard, ...filtered],
-    player3: [...newPlayer3]
-})
-}
-player4turn = () => {
-    let {player4} = this.state
-    let {playCard} = this.state
-let filtered = player4.filter(cards=> {
-    return playCard.some(card=> {
-        return card.props.children === cards.props.children
-    })
-});
-let newPlayer4 = player4.filter(card => {
-    return playCard.some(cards=> {
-    return card.props.children !== cards.props.children})})
-this.setState({
-    playCard: [...playCard, ...filtered],
-    player4: [...newPlayer4]
-})
-}
-
-
-
-        render(){
-            // console.log( this.state.player1 )
-            // console.log( this.state.player2 )
-            // console.log( this.state.player3 )
-            // console.log( this.state.player4 )
-            // console.log(this.state.playCard)
+    render(){
             
             return(
                 <div>
-            <div>
-                <Deck deck={this.state.deck} />
-            </div>
+            
+                
+            
                 <p id='player1'>{this.state.player1}</p>
                 <p id='player2'>{this.state.player2}</p>
                 <p id='player3'>{this.state.player3}</p>
                 <p id='player4'>{this.state.player4}</p>
                 <button onClick={() => this.deal()} >Deal</button>
+                <button onClick={() => this.sort()} >sort</button>
                 <button onClick={() => this.choseCard()} >Player 1</button>
                 <button onClick={() => this.player2turn()} >Player 2</button>
                 <button onClick={() => this.player3turn()} >Player 3</button>

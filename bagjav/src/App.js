@@ -15,8 +15,8 @@ class App extends Component {
       
       {/* <Route path="" render={Intro}/> */}
      <Cards/>
-     <Card />
-     <Deck />
+     {/* <Card /> */}
+     {/* <Deck /> */}
      {/* <PlayGame /> */}
    
     </div>
