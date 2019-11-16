@@ -1,7 +1,9 @@
 import React, {Component} from 'react';
 import './App.css';
 //import Intro from './Intro'
-import Cards from './Card'
+import Deck from './components/Deck'
+import Cards from './Cards'
+import Card from './components/Card'
 //import PlayGame from './components/playGame'
 
 
@@ -13,6 +15,8 @@ class App extends Component {
       
       {/* <Route path="" render={Intro}/> */}
      <Cards/>
+     <Card />
+     <Deck />
      {/* <PlayGame /> */}
    
     </div>
