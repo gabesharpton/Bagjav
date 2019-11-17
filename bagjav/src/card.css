@@ -1,26 +1,31 @@
-div{
-    height: 10px;
-}
+
 
 span{
     background-color: peachpuff;
-    margin: 1%;
+    display: inline-block;
+    overflow: inherit;
+    
+    
 }
 p{
-    margin-bottom: 30px;
-    line-height: 30px;
+    
+    line-height: 40px;
+    display: block;
 }
-.cards {
-    height: 50px;
-    width: 100px;
+span.cards {
+    position: center;
+    margin: 10px;
+    height: 40px;
+    width: 66px;
     border: 2px solid black;
-    padding: 15px;
+    padding: 5px
 
 }
-.players{
-    width: 200px;
-    height: 100px;
-
+#player1, #player3{ 
+    border: 5px chartreuse solid;
+}
+#player2, #player4{ 
+    border: 5px purple solid;
 }
 button {
     padding: 15px;

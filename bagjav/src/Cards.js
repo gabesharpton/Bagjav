@@ -23,12 +23,12 @@ export default class Cards extends Component{
 
     makeCards = () => {
         const suits = ['Hearts', 'Spades', 'Clubs', 'Diamonds']
-        const values = ['A', '2', '3', '4', '5', '6', '7', '8', '9', 'T', 'J', 'Q', 'K']
+        const values = ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'Jack', 'Queen', 'King', 'Ace']
 
         
         for (let suit in suits){
             for (let value in values) {
-                this.state.deck.push(<span className='cards' key={value+suit}>{values[value]}</span>);
+                this.state.deck.push(<span className='cards' key={value+suit}>{`${values[value]}`}</span>);
                 //change span to Deck
             }
         }
