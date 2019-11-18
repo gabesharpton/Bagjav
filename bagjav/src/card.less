@@ -8,47 +8,35 @@
     width: 66px;
     border: 2px solid black;
     padding: 5px;
+    font-size: 12px;
 }
-
 body {
     background-color: silver;
+    margin: @margin;
 }
-#player1{ margin: @margin }
-
 button{
     background-color: @cardColor;
     display: inline-block;
-    overflow: inherit;
-    
-    
+    overflow: inherit;  
 }
 p{
     line-height: 40px;
     display: block;
 }
-button.cards {
-    .playCards()
-
-}
-#player1{ 
-    border: @playerBorder greenyellow;
-}
+button.cards {.playCards()}
+#player1{ border: @playerBorder greenyellow; }
 #player3 {
-    border: @playerBorder red;
+            border: @playerBorder red;
     button{
-    color: @cardColor;
+            color: @cardColor;
 }}
 #player2 { 
-    border: @playerBorder purple;
+            border: @playerBorder purple;
     button{
-    color: @cardColor;
+            color: @cardColor;
 }}
 #player4 {
-    border: @playerBorder orange;
+            border: @playerBorder orange;
     button{
-        color: @cardColor;
+            color: @cardColor;
     }}
-button {
-    padding: 15px;
-
-}

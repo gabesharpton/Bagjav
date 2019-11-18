@@ -1,7 +1,5 @@
 body {
   background-color: silver;
-}
-#player1 {
   margin: 10px;
 }
 button {
@@ -20,6 +18,7 @@ button.cards {
   width: 66px;
   border: 2px solid black;
   padding: 5px;
+  font-size: 12px;
 }
 #player1 {
   border: 5px solid greenyellow;
@@ -27,21 +26,18 @@ button.cards {
 #player3 {
   border: 5px solid red;
 }
-#player3 button {
+/* #player3 button {
   color: peachpuff;
-}
+} */
 #player2 {
   border: 5px solid purple;
 }
-#player2 button {
+/* #player2 button {
   color: peachpuff;
-}
+} */
 #player4 {
   border: 5px solid orange;
 }
-#player4 button {
+/* #player4 button {
   color: peachpuff;
-}
-button {
-  padding: 15px;
-}
+} */
