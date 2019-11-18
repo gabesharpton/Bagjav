@@ -1,0 +1,54 @@
+@margin: 10px;
+@playerBorder: 5px solid;
+@cardColor: peachpuff;
+.playCards() {
+    position: center;
+    margin: 10px;
+    height: 40px;
+    width: 66px;
+    border: 2px solid black;
+    padding: 5px;
+}
+
+body {
+    background-color: silver;
+}
+#player1{ margin: @margin }
+
+button{
+    background-color: @cardColor;
+    display: inline-block;
+    overflow: inherit;
+    
+    
+}
+p{
+    line-height: 40px;
+    display: block;
+}
+button.cards {
+    .playCards()
+
+}
+#player1{ 
+    border: @playerBorder greenyellow;
+}
+#player3 {
+    border: @playerBorder red;
+    button{
+    color: @cardColor;
+}}
+#player2 { 
+    border: @playerBorder purple;
+    button{
+    color: @cardColor;
+}}
+#player4 {
+    border: @playerBorder orange;
+    button{
+        color: @cardColor;
+    }}
+button {
+    padding: 15px;
+
+}

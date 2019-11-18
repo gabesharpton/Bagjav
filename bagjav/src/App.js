@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
 import './App.css';
 //import Intro from './Intro'
-import Deck from './components/Deck'
+//import Deck from './components/Deck'
 import Cards from './Cards'
-import Card from './components/Card'
+//import Card from './components/Card'
 //import PlayGame from './components/playGame'
 
 

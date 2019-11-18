@@ -16,28 +16,6 @@ export default class PlayGame extends Component{
         }
     }
 
-choseCard(){
-    this.setState(state => {
-        return {playCard: [...state.playCard, ...state.player1.splice(0, 1)]};
-      });
-    
-}
-player2turn = () => {
-    this.setState(state => {
-        return {playCard: [...state.playCard, ...state.player2.splice(0, 1)]};
-      });
-    
-}
-player3turn = () => {
-    this.setState(state => {
-        return {playCard: [...state.playCard, ...state.player3.splice(0, 1)]};
-      });
-}
-player4turn = () => {
-    this.setState(state => {
-        return {playCard: [...state.playCard, ...state.player4.splice(0, 1)]};
-      });
-}
 render() 
 {
 console.log(this)
