@@ -15,9 +15,8 @@ export default class Cards extends Component{
             currentPlayer: 1   
         }
         this.makeCards(); 
-        this.shuffle();
+        this.shuffle();   
     }
-
     makeCards = () => {
             const suits = ['Hearts', 'Spades', 'Clubs', 'Diamonds']
             const values = ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'Jack', 'Queen', 'King', 'Ace']
@@ -33,9 +32,7 @@ export default class Cards extends Component{
                             }
                             key = {
                                 value + suit
-                            }> {
-                                `${values[value]} of ${suits[suit]}`
-                            } </button>);
+                            }> {`${values[value]} of ${suits[suit]}`} </button>);
 
                     }
                 }
@@ -56,6 +53,7 @@ export default class Cards extends Component{
                 return this;
         };
         deal = () => {
+            if(this.state.player1.length < 1){
                 this.setState({ player1: this.state.deck.filter((cards, index) => {
                         return index < 13 ? cards : null
                     })
@@ -72,7 +70,7 @@ export default class Cards extends Component{
                         return index >= 39 && index <= 52 ? cards : null
                     }) 
                 }) 
-                
+            }
         };
         sort = () => {
             
@@ -92,33 +90,37 @@ export default class Cards extends Component{
                     };
     
     choseCard = (event) => {
-        console.log('hello world')
-        if(event.target && event.target.value){
-            //console.log(event.target.value)
+        //console.log('hello world')
+        //if(event.target && event.target.value){
+            const targetedCard = event.currentTarget
+            console.log(targetedCard)
             const eventTarget = event.target.value
             this.setState(({
                 player1,
             }) => {
-                let button = <button className = 'cards'> {
-                    eventTarget
-                } </button>;
-                let newp1 = [];
+                let button = <button className = 'cards' key = {eventTarget}> {eventTarget} </button>;
+                let newpCard = [];
                 //console.log(event.target.value)
                 if(eventTarget){
-                    newp1.push(button)
-                    console.log(newp1)
+                    newpCard.push(button)
+                        let filtered = this.state.player1.filter(cards => {
+                            return newpCard.some(card => {
+                                return card.value !== cards.props.children[1]
+                            })
+                        });
+                    console.log(newpCard)
                     if (this.state.currentPlayer === 1) {
                         return {
-                            playCard: newp1,
-                            player1: [...player1.slice(event.target,player1.length)],
+                            playCard: newpCard,
+                            player1: [...filtered],
                             currentPlayer: 2
                         }
                     }else {
-                        return alert('Player2 turn')
+                        return alert('You already played this set')
                     }
-            }
-            }, () => console.log(this.state))
-    }
+            }}
+            )
+    //}
     }
     player2turn = () => {
         let {
@@ -129,12 +131,12 @@ export default class Cards extends Component{
         } = this.state
         let filtered = player2.filter(cards => {
             return playCard.some(card => {
-                return card.props.children[0] === cards.props.children[0]
+                return card.props.children[1][0] === cards.props.children[1][0]
             })
         });
         let newPlayer2 = player2.filter(card => {
             return playCard.some(cards => {
-                return card.props.children[0] !== cards.props.children[0]
+                return card.props.children[1][0] !== cards.props.children[1][0]
             })
         })
         if (playCard.length >= 1) {
@@ -153,12 +155,12 @@ export default class Cards extends Component{
         } = this.state
         let filtered = player3.filter(cards => {
             return playCard.some(card => {
-                return card.props.children[0] === cards.props.children[0]
+                return card.props.children[1][0] === cards.props.children[1][0]
             })
         });
         let newPlayer3 = player3.filter(card => {
             return playCard.some(cards => {
-                return card.props.children[0] !== cards.props.children[0]
+                return card.props.children[1][0] !== cards.props.children[1][0]
             })
         })
         this.setState({
@@ -175,38 +177,47 @@ export default class Cards extends Component{
         } = this.state
         let filtered = player4.filter(cards => {
             return playCard.some(card => {
-                return card.props.children[0] === cards.props.children[0]
+                return card.props.children[1][0] === cards.props.children[1][0]
             })
         });
         let newPlayer4 = player4.filter(card => {
             return playCard.some(cards => {
-                return card.props.children[0] !== cards.props.children[0]
+                return card.props.children[1][0] !== cards.props.children[1][0]
             })
         })
         this.setState({
             playCard: [...playCard, ...filtered],
-            player4: [...newPlayer4]
+            player4: [...newPlayer4],
+            currentPlayer: 5
         })
     };
-    playGame = (e) => {
+    playGame = () => {
 
-                while(this.state.playCard.length < 4){
-                    // this.choseCard
-                    // this.player2turn
-                    // this.player3turn
-                    // this.player4turn
+                if(this.state.playCard.length < 4){
+                    this.choseCard()
+                    this.player2turn()
+                    this.player3turn()
+                    this.player4turn()
             }
         }
 
     endSet = () => {
-        if(this.state.playCard.length < 4){
-            alert("set Over")
-        }
+        setTimeout(()=>{
+        if(this.state.playCard.length === 4|| this.state.currentPlayer === 5){
+            console.log("set Over")
+            this.setState({
+                playCard: [],
+                currentPlayer: 1
+            })}else{
+                console.log('still playing')
+            }
+        },500)
     }
     
     
 render() {
-    console.log(this.state)
+    this.endSet();
+    //console.log(this.state)
     return (<div>
             
             {/* <Deck deck={this.props.deck}/> */}
@@ -217,14 +228,12 @@ render() {
             <p id='player4'>{this.state.player4}</p>
             <button onClick={() => this.deal()} >Deal</button>
             <button onClick={() => this.sort()} >sort</button>
-            {/* <button onClick={() => this.playGame()}>Play</button> */}
-            <button onClick={() => this.player1Turn()} >Player 1</button>
             <button onClick={() => this.player2turn()} >Player 2</button>
             <button onClick={() => this.player3turn()} >Player 3</button>
             <button onClick={() => this.player4turn()} >Player 4</button>
             
-            <p id='player1'>{this.state.playCard} is the play card</p>
-            <p>{this.state.playCard.length}</p>
+            <p id='playCard'>Card in play:
+            {this.state.playCard}</p>
             </div>)
 }
 }

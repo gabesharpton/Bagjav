@@ -24,19 +24,41 @@ p{
     display: block;
 }
 button.cards {.playCards()}
-#player1{ border: @playerBorder greenyellow; }
+#player1{ border: @playerBorder greenyellow;
+position: absolute;
+bottom: 10%;
+left: 10%; }
 #player3 {
             border: @playerBorder red;
+            position: absolute;
+            top:5%;
+            left: 10%; 
     button{
             color: @cardColor;
 }}
 #player2 { 
             border: @playerBorder purple;
+            position: absolute;
+            top: 29%;
+            left: 5%;
+            width: 27%;
     button{
             color: @cardColor;
 }}
 #player4 {
             border: @playerBorder orange;
+            position: absolute;
+            top: 29%;
+            right: 5%;
+            width: 27%;
     button{
             color: @cardColor;
     }}
+
+#playCard {
+    position: absolute;
+    top: 22%;
+    left: 44%;
+    border: 2px solid black;
+    max-width: 10%;
+}
