@@ -1,5 +1,6 @@
 # Bagjav
 This is a card game I created with my friends!
+![alt text](./planning/images/Bagjav.png)
 ---
 ## This app will use:
 1) React
