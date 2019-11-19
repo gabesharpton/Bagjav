@@ -3,8 +3,8 @@ This is a card game I created with my friends!
 ---
 ## This app will use:
 1) React
-2) CSS
-3) Django
+2) LESS
+
 ---
 ## MVP
 It should be a card game that a single player can play all the way through. I am excited to learn the how I can make this game into a multiplayer game and potentially add some CSS animations in it. 
