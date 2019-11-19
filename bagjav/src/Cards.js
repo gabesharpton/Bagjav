@@ -86,8 +86,13 @@ export default class Cards extends Component{
         };
                 
     player1Turn = () => {
-                        this.choseCard()
-                    };
+        let {playCard} = this.state
+        if(playCard.length === 1)
+                       this.player2turn();
+                       this.player3turn();
+                       this.player4turn()}
+
+                    
     
     choseCard = (event) => {
         //console.log('hello world')
@@ -103,7 +108,7 @@ export default class Cards extends Component{
                 //console.log(event.target.value)
                 if(eventTarget){
                     newpCard.push(button)
-                        let filtered = this.state.player1.filter(cards => {
+                        let filtered = player1.filter(cards => {
                             return newpCard.some(card => {
                                 return card.value !== cards.props.children[1]
                             })
@@ -112,7 +117,7 @@ export default class Cards extends Component{
                     if (this.state.currentPlayer === 1) {
                         return {
                             playCard: newpCard,
-                            player1: [...filtered],
+                            player1: [...filtered, player1.length],
                             currentPlayer: 2
                         }
                     }else {
@@ -120,7 +125,17 @@ export default class Cards extends Component{
                     }
             }}
             )
+            this.removeCardInPlay()
+            //this.player1Turn();
     //}
+    }
+    removeCardInPlay = () => {
+        let {player1} = this.state
+        if(player1.value === this.state.playCard.value){
+            this.setState({
+                player1: [...player1.slice(1, player1.length)]
+            })
+        }
     }
     player2turn = () => {
         let {
@@ -145,6 +160,7 @@ export default class Cards extends Component{
                 player2: [...newPlayer2]
             })
         } else return;
+        
     };
     player3turn = () => {
         let {
