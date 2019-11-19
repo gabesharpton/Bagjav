@@ -24,13 +24,13 @@ button.cards {
   border: 5px solid greenyellow;
   position: absolute;
   bottom: 10%;
-  left: 10%;
+  left: 25%;
 }
 #player3 {
   border: 5px solid red;
   position: absolute;
   top: 5%;
-  left: 10%;
+  left: 25%;
 }
 #player3 button {
   color: peachpuff;
