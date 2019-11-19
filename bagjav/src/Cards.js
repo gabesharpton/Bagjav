@@ -229,10 +229,21 @@ export default class Cards extends Component{
             }
         },500)
     }
+    endGame = () => {
+        let {player1} = this.state
+        let {playCard} = this.state
+        if(player1.length === 0 && playCard.length === 1){
+            setTimeout(()=>{
+                alert('Player 1 wins this hand')
+            }, 500
+            
+            )}
+    }
     
     
 render() {
     this.endSet();
+    this.endGame();
     //console.log(this.state)
     return (<div>
             

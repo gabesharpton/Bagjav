@@ -1,0 +1,318 @@
+[{
+"suit": "Hearts",
+"value": "2",
+"index": "1",
+"front_img": "",
+"back_img": ""
+},
+{
+"suit": "Hearts",
+"value": "3",
+"index": "2",
+"front_img": "",
+"back_img": ""
+},
+{
+"suit": "Hearts",
+"value": "4",
+"index": "3",
+"front_img": "",
+"back_img": ""
+},
+{
+"suit": "Hearts",
+"value": "5",
+"index": "4",
+"front_img": "",
+"back_img": ""
+},
+{
+"suit": "Hearts",
+"value": "6",
+"index": "5",
+"front_img": "",
+"back_img": ""
+},
+{
+"suit": "Hearts",
+"value": "7",
+"index": "6",
+"front_img": "",
+"back_img": ""
+},{
+"suit": "Hearts",
+"value": "8",
+"index": "7",
+"front_img": "",
+"back_img": ""
+},{
+"suit": "Hearts",
+"value": "9",
+"index": "8",
+"front_img": "",
+"back_img": ""
+},{
+"suit": "Hearts",
+"value": "10",
+"index": "9",
+"front_img": "",
+"back_img": ""
+},{
+"suit": "Hearts",
+"value": "Jack",
+"index": "10",
+"front_img": "",
+"back_img": ""
+},{
+"suit": "Hearts",
+"value": "Queen",
+"index": "11",
+"front_img": "",
+"back_img": ""
+},{
+"suit": "Hearts",
+"value": "King",
+"index": "12",
+"front_img": "",
+"back_img": ""
+},{
+"suit": "Hearts",
+"value": "Ace",
+"index": "13",
+"front_img": "",
+"back_img": ""
+},{
+"suit": "Clubs",
+"value": "2",
+"index": "14",
+"front_img": "",
+"back_img": ""
+},{
+"suit": "Clubs",
+"value": "3",
+"index": "15",
+"front_img": "",
+"back_img": ""
+},{
+"suit": "Clubs",
+"value": "4",
+"index": "16",
+"front_img": "",
+"back_img": ""
+},{
+"suit": "Clubs",
+"value": "5",
+"index": "17",
+"front_img": "",
+"back_img": ""
+},{
+"suit": "Clubs",
+"value": "6",
+"index": "18",
+"front_img": "",
+"back_img": ""
+},{
+"suit": "Clubs",
+"value": "7",
+"index": "19",
+"front_img": "",
+"back_img": ""
+},{
+"suit": "Clubs",
+"value": "8",
+"index": "20",
+"front_img": "",
+"back_img": ""
+},{
+"suit": "Clubs",
+"value": "9",
+"index": "21",
+"front_img": "",
+"back_img": ""
+},{
+"suit": "Clubs",
+"value": "10",
+"index": "22",
+"front_img": "",
+"back_img": ""
+},{
+"suit": "Clubs",
+"value": "Jack",
+"index": "23",
+"front_img": "",
+"back_img": ""
+},{
+"suit": "Clubs",
+"value": "Queen",
+"index": "24",
+"front_img": "",
+"back_img": ""
+},{
+"suit": "Clubs",
+"value": "King",
+"index": "25",
+"front_img": "",
+"back_img": ""
+},{
+"suit": "Clubs",
+"value": "Ace",
+"index": "26",
+"front_img": "",
+"back_img": ""
+},{
+"suit": "Diamonds",
+"value": "2",
+"index": "27",
+"front_img": "",
+"back_img": ""
+},{
+"suit": "Diamonds",
+"value": "3",
+"index": "28",
+"front_img": "",
+"back_img": ""
+},{
+"suit": "Diamonds",
+"value": "4",
+"index": "29",
+"front_img": "",
+"back_img": ""
+},{
+"suit": "Diamonds",
+"value": "5",
+"index": "30",
+"front_img": "",
+"back_img": ""
+},{
+"suit": "Diamonds",
+"value": "6",
+"index": "31",
+"front_img": "",
+"back_img": ""
+},{
+"suit": "Diamonds",
+"value": "7",
+"index": "32",
+"front_img": "",
+"back_img": ""
+},{
+"suit": "Diamonds",
+"value": "8",
+"index": "33",
+"front_img": "",
+"back_img": ""
+},{
+"suit": "Diamonds",
+"value": "9",
+"index": "34",
+"front_img": "",
+"back_img": ""
+},{
+"suit": "Diamonds",
+"value": "10",
+"index": "35",
+"front_img": "",
+"back_img": ""
+},{
+"suit": "Diamonds",
+"value": "Jack",
+"index": "36",
+"front_img": "",
+"back_img": ""
+},{
+"suit": "Diamonds",
+"value": "Queen",
+"index": "37",
+"front_img": "",
+"back_img": ""
+},{
+"suit": "Diamonds",
+"value": "King",
+"index": "38",
+"front_img": "",
+"back_img": ""
+},{
+"suit": "Diamonds",
+"value": "Ace",
+"index": "39",
+"front_img": "",
+"back_img": ""
+},{
+    "suit": "Spades",
+    "value": "2",
+    "index": "40",
+    "front_img": "",
+    "back_img": ""
+},{
+    "suit": "Spades",
+    "value": "3",
+    "index": "41",
+    "front_img": "",
+    "back_img": ""
+},{
+    "suit": "Spades",
+    "value": "4",
+    "index": "42",
+    "front_img": "",
+    "back_img": ""
+},{
+    "suit": "Spades",
+    "value": "5",
+    "index": "43",
+    "front_img": "",
+    "back_img": ""
+},{
+    "suit": "Spades",
+    "value": "6",
+    "index": "44",
+    "front_img": "",
+    "back_img": ""
+},{
+    "suit": "Spades",
+    "value": "7",
+    "index": "45",
+    "front_img": "",
+    "back_img": ""
+},{
+    "suit": "Spades",
+    "value": "8",
+    "index": "46",
+    "front_img": "",
+    "back_img": ""
+},{
+    "suit": "Spades",
+    "value": "9",
+    "index": "47",
+    "front_img": "",
+    "back_img": ""
+},{
+    "suit": "Spades",
+    "value": "10",
+    "index": "48",
+    "front_img": "",
+    "back_img": ""
+},{
+    "suit": "Spades",
+    "value": "Jack",
+    "index": "49",
+    "front_img": "",
+    "back_img": ""
+},{
+    "suit": "Spades",
+    "value": "Queen",
+    "index": "50",
+    "front_img": "",
+    "back_img": ""
+},{
+    "suit": "Spades",
+    "value": "King",
+    "index": "51",
+    "front_img": "",
+    "back_img": ""
+},{
+    "suit": "Spades",
+    "value": "Ace",
+    "index": "52",
+    "front_img": "",
+    "back_img": ""
+}]

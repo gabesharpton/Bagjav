@@ -25,7 +25,3 @@ class App extends Component {
 }
 export default App;
 
-const deck1 = new Cards();
-        console.log(deck1);
-        // deck1.reset();
-        // console.log(deck1.deck);
