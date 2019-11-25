@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/Bagjav/static/css/main.f46a4a37.chunk.css",
+    "main.js": "/Bagjav/static/js/main.8f4acc90.chunk.js",
+    "main.js.map": "/Bagjav/static/js/main.8f4acc90.chunk.js.map",
+    "runtime-main.js": "/Bagjav/static/js/runtime-main.cf12a997.js",
+    "runtime-main.js.map": "/Bagjav/static/js/runtime-main.cf12a997.js.map",
+    "static/js/2.1ece3417.chunk.js": "/Bagjav/static/js/2.1ece3417.chunk.js",
+    "static/js/2.1ece3417.chunk.js.map": "/Bagjav/static/js/2.1ece3417.chunk.js.map",
+    "index.html": "/Bagjav/index.html",
+    "precache-manifest.d263fe00288f96d1c0d993efda741329.js": "/Bagjav/precache-manifest.d263fe00288f96d1c0d993efda741329.js",
+    "service-worker.js": "/Bagjav/service-worker.js",
+    "static/css/main.f46a4a37.chunk.css.map": "/Bagjav/static/css/main.f46a4a37.chunk.css.map"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.cf12a997.js",
+    "static/js/2.1ece3417.chunk.js",
+    "static/css/main.f46a4a37.chunk.css",
+    "static/js/main.8f4acc90.chunk.js"
+  ]
+}
