@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import './card.css'
+import './styling/card.css'
 //import Deck from './components/Deck'
 
 export default class Cards extends Component{
