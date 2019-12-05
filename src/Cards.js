@@ -103,11 +103,11 @@ export default class Cards extends Component{
             this.setState(({
                 player1,
             }) => {
-                let button = <button className = 'cards' key = {eventTarget}> {eventTarget} </button>;
+                let card = <button className='cards' key={eventTarget}> {eventTarget} </button>;
                 let newpCard = [];
                 //console.log(event.target.value)
                 if(eventTarget){
-                    newpCard.push(button)
+                    newpCard.push(card)
                         let filtered = player1.filter(cards => {
                             return newpCard.some(card => {
                                 return card.value !== cards.props.children[1]

@@ -1,6 +1,6 @@
 body {
   background-color: silver;
-  margin: 10px;
+  margin: 50px;
 }
 button {
   background-color: peachpuff;
@@ -13,6 +13,7 @@ p {
 }
 button.cards {
   position: center;
+  background-color: cyan;
   margin: 10px;
   height: 40px;
   width: 66px;
@@ -22,6 +23,7 @@ button.cards {
 }
 #player1 {
   border: 5px solid greenyellow;
+  background: green;
   position: absolute;
   bottom: 10%;
   left: 12%;
