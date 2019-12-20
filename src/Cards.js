@@ -47,9 +47,7 @@ export default class Cards extends Component{
                 while(j) {
                     i = Math.floor(Math.random() * j--);
                     [deck[j], deck[i]] = [deck[i], deck[j]]
-                    // console.log([deck[i], deck[j]])
                 }
-                //this.deal();
                 return this;
         };
         deal = () => {
@@ -73,8 +71,6 @@ export default class Cards extends Component{
             }
         };
         sort = () => {
-            
-            //let sorted = (a,b) => a.props.children - b.props.children;
             this.setState({player1: this.state.player1.sort((a,b) => a.key - b.key)}
                 );
             this.setState({player2: this.state.player2.sort((a,b) => a.key - b.key)}
@@ -95,8 +91,6 @@ export default class Cards extends Component{
                     
     
     choseCard = (event) => {
-        //console.log('hello world')
-        //if(event.target && event.target.value){
             const targetedCard = event.currentTarget
             console.log(targetedCard)
             const eventTarget = event.target.value
@@ -105,7 +99,6 @@ export default class Cards extends Component{
             }) => {
                 let card = <button className='cards' key={eventTarget}> {eventTarget} </button>;
                 let newpCard = [];
-                //console.log(event.target.value)
                 if(eventTarget){
                     newpCard.push(card)
                         let filtered = player1.filter(cards => {
@@ -126,8 +119,6 @@ export default class Cards extends Component{
             }}
             )
             this.removeCardInPlay()
-            //this.player1Turn();
-    //}
     }
     removeCardInPlay = () => {
         let {player1} = this.state
@@ -244,11 +235,7 @@ export default class Cards extends Component{
 render() {
     this.endSet();
     this.endGame();
-    //console.log(this.state)
     return (<div>
-            
-            {/* <Deck deck={this.props.deck}/> */}
-        
             <p id='player1'>{this.state.player1}</p>
             <p id='player2'>{this.state.player2}</p>
             <p id='player3'>{this.state.player3}</p>
@@ -264,52 +251,3 @@ render() {
             </div>)
 }
 }
-
-
-
-
-
-
-
-
-   // --------------------------------------------------------------
-
-
-
-        // this.setState({playCard: this.state.player2.filter((card,index ) => {
-        //     return index === this.state.playCard[0].props.children ? card : null
-        // })})
-
-
-                            //{this.setState({ player1: this.state.player1.filter(card => card.key !== i)})
-                //i.preventDefault()
-                //takes i from for loop to determin index}
-                            // for(let i = 0; i < player1.length; i++)
-                    // {
-                            // const index = i;
-                            // console.log(i)
-         
-                            // choseCard = (i) => {
-            //     //let {player1} = this.state
-            //     //takes i from for loop to determin index
-            //     i.preventDefault()
-            //     for(let i = 0; i < this.state.player1.length; i++){
-            //     this.setState(({playCard, player1}) => {
-            //             console.log(i)
-            //             if(playCard.length < 4){
-            //                 return {
-            //                     playCard: [...playCard, ...player1.slice(i, 1)],
-            //                     player1: [...player1.slice(0, i), ...player1.slice(i, player1.length)]
-                                
-            //                 };
-                        
-            //             //return index = i
-            //         }
-            //         else{
-            //             return}
-            //         }
-            //             //console.log(i)
-                        
-            //     )};
-                    
-            //     }
