@@ -4,7 +4,7 @@
   "homepage": "https://gabesharpton.github.io/Bagjav/",
   "dependencies": {
     "gh-pages": "^2.1.1",
-    "lodash": "^4.17.19",
+    "lodash": "^4.17.21",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
     "react-router": "^5.1.2",
